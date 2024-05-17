@@ -1,20 +1,21 @@
+import React from 'react';
 import './App.css';
-import Navbar from './Components/navbar';
-import avatar from './Images/calvin-avatar.png'
+import HomePage from './pages/home-page.js';
+import AboutPage from './pages/about-page.js';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-        <Navbar/>
-        <section className = "content">
-          <div className = "introduction">
-            <img src = {avatar} width = "300" height = "300"></img>
-            <h1> Hello, I'm Calvin!</h1> 
-            <h2 className = "description">Software Developer</h2>
-          </div>
-        </section>
+    <div class='wrapper'>
+      <BrowserRouter>
+        <Routes>
+          <Route path = "/" element = {<HomePage/>}/>
+          <Route path = "/about-me" element = {<AboutPage/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;
