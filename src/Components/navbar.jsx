@@ -1,5 +1,6 @@
 import React from 'react' 
 import logo from '../Images/calvin-logo.png'
+import { Link } from 'react-router-dom';
 import './navbar.css'
 
 function Navbar() {
@@ -9,7 +10,7 @@ function Navbar() {
                 <img src= {logo} width = "150" height = "100" />
             </div>
             < ul class = "navbar-links">
-                <li> Projects</li>
+                <li><a href='../Pages/about-me.js'>About Me</a></li>
                 <li> My Experience</li>
                 <li> Resume </li>
             </ul>
